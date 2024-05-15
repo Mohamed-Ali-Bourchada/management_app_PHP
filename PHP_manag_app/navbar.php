@@ -17,10 +17,7 @@
                     <a class="nav-link" href="formInsertM.php">Insert Epreuve</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="afficheE.php">Affiche Epreuve : <?php
-                   echo $_SESSION['userId']; 
-                    
-                    ?></a>
+                    <a class="nav-link" href="afficheE.php">Affiche Epreuve</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="afficheM.php">Affiche Matiere</a>

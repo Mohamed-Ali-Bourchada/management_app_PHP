@@ -42,12 +42,11 @@ if (isset($_POST['submit'])) {
     <title>Sign Up</title>
     <!-- SWEET ALERT 2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
 
 
 </head>

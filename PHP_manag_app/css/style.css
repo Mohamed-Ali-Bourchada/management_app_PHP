@@ -6,7 +6,6 @@ body {
     background-position: 0%;
     background-repeat: no-repeat;
     background-size: auto;
-    /* Set background image size to auto */
 }
 *{
     margin: 0;
@@ -99,16 +98,7 @@ form{
 .field:focus-within::after {
     width: 100%;
 }
-.eye-icon{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #8b8b8b;
-    cursor: pointer;
-    padding: 5px;
-}
+
 .field button{
     color: #fff;
     background-color: #0171d3;
@@ -156,10 +146,12 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 a.facebook{
     color: #fff;
     background-color: #4267b2;
+    
 }
 a.facebook .facebook-icon{
     height: 28px;
