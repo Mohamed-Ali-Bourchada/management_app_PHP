@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,48 +6,14 @@
   <title>Login Form</title>
   <!-- sweet alert cdn -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    /* Custom CSS */
-    body {
-      background-color: #f8f9fa;
-    }
-    .login-container {
-      max-width: 400px;
-      margin: auto;
-      margin-top: 100px;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    }
-    .login-container h2 {
-      color: #333;
-      text-align: center;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .form-control {
-      border-radius: 20px;
-    }
-    .btn-primary {
-      border-radius: 20px;
-      background-color: #007bff;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #0056b3;
-    }
-    .signup{
-      color:green;
-      font-weight:bold;
-      font-size:12px;
-      text-align:center
-    }
-  </style>
+
 
 </head>
 
@@ -86,24 +51,53 @@ if(isset($_SESSION["valideLogin"])){
 }
 ?>
 
-<div class="container">
-  <div class="login-container">
-    <h2>Login</h2>
-    <form method="post" action="valide.php">
-      <div class="form-group">
-        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
-      </div>
-     
-      <button type="submit" name ="submit"class="btn btn-primary btn-block">Login</button>
-   
-      <a href="../signup.php">dont have an account?</a>
+<div class="container">           
+   <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form method="POST" action="valide.php">
+                        <div class="field input-field">
+                            <input type="email" name="email" placeholder="Email" class="input" required>
+                        </div>
 
-    </form>
-  </div>
-</div>
+                        <div class="field input-field">
+                            <input type="password" name="password" id="password"placeholder="Password" class="password" required>
+                           
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field">
+      <button type="submit" name ="submit">Login</button>
+
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="../signup.php" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="../images/google.png" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+</section>
 
 <!-- Bootstrap JS and jQuery -->
 

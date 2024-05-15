@@ -17,10 +17,16 @@
                     <a class="nav-link" href="formInsertM.php">Insert Epreuve</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="afficheE.php">Affiche Epreuve</a>
+                    <a class="nav-link" href="afficheE.php">Affiche Epreuve : <?php
+                   echo $_SESSION['userId']; 
+                    
+                    ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="afficheM.php">Affiche Matiere</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="afficheUsers.php">Affiche Users</a>
                 </li>
             <li class="nav-item">
                 <a class="nav-link" href="signOut.php"> Signout
