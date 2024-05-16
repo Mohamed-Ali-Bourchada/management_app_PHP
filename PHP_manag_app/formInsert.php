@@ -24,14 +24,17 @@ if (!isset($_SESSION['auth'])) {
 
             if ($stmt->execute()) {
                 echo "<script>alert('Matiere ajoutée avec succès');</script>";
+                $valide=true;
 
             } else {
                 echo "<script>alert('Error!');</script>";
 
             }
         } else {
+            // Display alert with error message
             echo "<script>alert('Le code matière existe déjà.');</script>";
-
+            
+            
         }
     }
 }
@@ -64,36 +67,36 @@ if (!isset($_SESSION['auth'])) {
     </style>
 </head>
 <body>
-           <?php
-       include("navbar.php");
-
-    ?>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="form-container">
-                    <h2>Insert Matiere</h2>
-                    <form method="POST" onsubmit="return formM()">
-                        <div class="mb-3">
-                            <label for="codemat" class="form-label">Code Matiere</label>
-                            <input type="text" class="form-control" id="codemat" name="codemat"  maxlength="3">
-                        </div>
-                        <div class="mb-3">
-                            <label for="libelle" class="form-label">Libelle</label>
-                            <input type="text" class="form-control" id="libelle" name="libelle">
-                        </div>
-                        <div class="mb-3">
-                            <label for="coef" class="form-label">Coef</label>
-                            <input type="text" class="form-control" id="coef" name="coef" >
-                        </div>
-                        <button type="submit" name="submit" class="btn btn-primary" >Insert</button>
-                    </form>
-                </div>
+<?php
+include("navbar.php");
+?>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2>Insert Matiere</h2>
+                <form method="POST" onsubmit="return formM()">
+                    <div class="mb-3">
+                        <label for="codemat" class="form-label">Code Matiere</label>
+                        <input type="text" class="form-control" id="codemat" name="codemat" maxlength="3"
+                               value="<?php if(isset($codemat)&& !isset($valide)) echo $codemat; ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="libelle" class="form-label">Libelle</label>
+                        <input type="text" class="form-control" id="libelle" name="libelle" value="<?php if(isset($libelle)&& !isset($valide)) echo $libelle; ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="coef" class="form-label">Coef</label>
+                        <input type="text" class="form-control" id="coef" name="coef" value="<?php if(isset($coef)&& !isset($valide)) echo $coef; ?>">
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary">Insert</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Bootstrap Bundle with Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 
         if ($res) {
             $_SESSION["signup"]=true;
+            $valide=true;
             header("Location: login/login.php");
             exit();
         } else {
@@ -70,11 +71,11 @@ if (isset($_POST['submit'])) {
                     <header>Signup</header>
                     <form method="POST">
                         <div class="field input-field">
-                            <input type="text"  id="username" name="username" placeholder="Username" required>
+                            <input type="text"  id="username" name="username" placeholder="Username" required value="<?php if(isset($username)&& !isset($valide)) echo $username; ?>">
                         </div>
 
                         <div class="field input-field">
-                            <input type="email"  id="email" name="email" placeholder="Email" required>
+                            <input type="email"  id="email" name="email" placeholder="Email" required value="<?php if(isset($email)&& !isset($valide)) echo $email; ?>">
                         </div>
 
                         <div class="field input-field">
